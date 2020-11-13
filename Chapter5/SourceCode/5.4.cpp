@@ -1,23 +1,15 @@
-//express.cpp - values of expressions
-
+//formore.cpp -- more looping  with for
 #include "iostream"
+const int  ArSize = 16; //example of external declaration
 int main()
 {
-    using namespace std;
-    int x;
-
-    cout << "The expression x = 100 has the value ";
-    cout << (x = 100) << endl;
-    cout << "Now x = " << x << endl;
-    cout << " The expression x > 3 has the value ";
-    cout << ( x > 3) << endl;
-    cout.setf(ios_base::boolalpha); // a neweer C++ feature
-    cout << "The expression x < 3 has the value: ";
-    cout << ( x<3 ) << endl;
-    cout << "The expression x > 3 has the value ";
-    cout << ( x > 3) << endl;
-    cout << "The expression x = 100 has the value ";
-    cout << (x = 100) << endl;
-
+    long long factorials[ArSize];
+    factorials[1] = factorials[0] = 1LL;
+    for (int i = 2; i < ArSize; i++) {
+        factorials[i] = i * factorials[i - 1];
+    }
+    for (int i = 0; i < ArSize; ++i) {
+        std::cout << i << " != " << factorials[i] << std::endl;
+    }
     return 0;
 }
