@@ -1,4 +1,4 @@
-//nnum_test.cpp -- use numeric test  in for loop
+//num_test.cpp -- use numeric test  in for loop
 
 #include <iostream>
 int main()
